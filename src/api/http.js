@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // axios 配置
 axios.defaults.timeout = 500 * 1000
-
+axios.defaults.baseURL="http://47.99.65.198:8020"
 var qs = require('qs')
 
 // Add a request interceptor

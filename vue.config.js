@@ -16,7 +16,7 @@ module.exports = {
     host: "0.0.0.0",
     port: 8080,
     // open: true, // 自动打开浏览器
-    // https: true,
+    https: true,
     hotOnly: true, // 热更新
     // 需要转发到的后端服务器地址 经过此配置后只需要访问 前端地址即可 如 localhost:8080
     // proxy: 'http://localhost:8020' // 开发环境
@@ -29,3 +29,4 @@ module.exports = {
     cordovaPath: 'src-cordova'
   }
 }
+

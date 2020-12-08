@@ -1,6 +1,6 @@
 import http from './http'
 
-// const apiHost = 'http://47.99.65.198:8020'
+const apiHost = 'http://47.99.65.198:8020'
 /**
  * 定义 GET 与 POST 请求
  * @param {*} url 

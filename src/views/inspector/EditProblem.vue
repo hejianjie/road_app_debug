@@ -584,8 +584,6 @@ export default {
               'patrolResultId': parseInt(this.addRoadProblemForm.patrolResultId) ,
              'userId': this.addRoadProblemForm.userId
         }
-   // http://47.99.65.198:8020/roadhazard/updateOneRoadProblem
-// 'http://localhost:8020/roadhazard/updateOneRoadProblem'
 
 
 
