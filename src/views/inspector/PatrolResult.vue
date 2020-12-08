@@ -11,7 +11,7 @@
           alt=""
         />
         <ion-label>
-          巡查路段<span style="margin-right: 35%"></span>
+          巡查路段<span style="margin-left: 10%"></span>
           {{ patrolInfo.nationalHighwayName }} {{ patrolInfo.roadSectionName }}
           {{ patrolInfo.beginStake }}~<span v-if="this.tempFlag == 1">暂无</span
           ><span v-else>{{ patrolInfo.endStake }}</span></ion-label

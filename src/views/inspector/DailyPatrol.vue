@@ -11,10 +11,13 @@
           alt=""
         />
         <ion-label>
-          巡查路段 {{ patrolInfo.nationalHighwayName }}
-          {{ patrolInfo.roadSectionName }} {{ patrolInfo.beginStake }}~{{
-            patrolInfo.endStake
-          }}</ion-label
+          <span>巡查路段</span
+          ><span style="margin-left: 10%">
+            {{ patrolInfo.nationalHighwayName }}
+            {{ patrolInfo.roadSectionName }} {{ patrolInfo.beginStake }}~{{
+              patrolInfo.endStake
+            }}</span
+          ></ion-label
         >
       </ion-item>
 
