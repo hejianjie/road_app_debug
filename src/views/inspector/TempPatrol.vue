@@ -17,7 +17,7 @@
           @ionChange="nationalHighwayId = $event.target.value"
           ok-text="确定"
           cancel-text="取消"
-          style="margin-right: 21%"
+          style="margin-right: 19%"
         >
           <ion-select-option
             v-for="(highway, index) in nationalHighways"
@@ -70,7 +70,7 @@
         <ion-input
           type="number"
           placeholder="如：4.33"
-          style="font-size: 14px; margin-left: 23%"
+          style="font-size: 14px; margin-left: 19%"
           :value="patrolResult.stakeBeginId"
           @ionChange="patrolResult.stakeBeginId = $event.target.value"
         ></ion-input>
@@ -131,7 +131,7 @@
         <ion-input
           type="text"
           placeholder="如：辽B 3653"
-          style="font-size: 14px; margin-left: 26%"
+          style="font-size: 14px; margin-left: 23%"
           :value="patrolResult.patrolCar"
           @ionChange="patrolResult.patrolCar = $event.target.value"
         ></ion-input>

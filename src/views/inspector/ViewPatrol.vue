@@ -11,7 +11,7 @@
           alt=""
         />
         <ion-label
-          >巡查路线 <span style="margin-right: 35%"></span
+          >巡查路线 <span style="margin-left: 20%"></span
           >{{ patrolInfo.nationalHighwayName }}
           {{ patrolInfo.roadSectionName }} {{ patrolInfo.beginStake }}~{{
             patrolInfo.endStake

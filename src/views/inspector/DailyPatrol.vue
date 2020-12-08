@@ -46,6 +46,7 @@
           @ionChange="patrolResult.patrolCar = $event.target.value"
           ok-text="确定"
           cancel-text="取消"
+          style="margin-right: 14%"
         >
           <ion-select-option
             v-for="(patrolCar, index) in patrolCars"
