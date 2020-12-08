@@ -4,7 +4,12 @@
     <HeaderMap />
     <ion-card>
       <ion-item>
-        <ion-icon name="locate" slot="start"></ion-icon>
+        <!-- <ion-icon name="locate" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/128/1280439.gif"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <ion-label>选择路线</ion-label>
         <ion-select
           placeholder="请选择高速"
@@ -54,7 +59,12 @@
         </ion-select>
       </ion-item> -->
       <ion-item>
-        <ion-icon name="skip-backward"></ion-icon>
+        <!-- <ion-icon name="skip-backward"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/122/1229977.gif"
+          alt=""
+          style="width: 25px; height: 25px"
+        />
         <ion-label>选择起始桩</ion-label>
         <ion-input
           type="number"
@@ -99,13 +109,23 @@
         </ion-select>
       </ion-item> -->
       <ion-item>
-        <ion-icon name="business" slot="start"></ion-icon>
+        <!-- <ion-icon name="business" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/108/1087412.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label>管理单位</ion-label>
         <ion-label>{{ deptName }}</ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-icon name="car" slot="start"></ion-icon>
+        <!-- <ion-icon name="car" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/121/1215020.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label>巡查车辆</ion-label>
         <ion-input
           type="text"
@@ -131,7 +151,12 @@
       </ion-item>
 
       <ion-item>
-        <ion-icon name="man" slot="start"></ion-icon>
+        <!-- <ion-icon name="man" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/129/1292944.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label> 巡查员 </ion-label>
         <ion-label>{{ inspectorName }}</ion-label>
       </ion-item>
@@ -144,7 +169,12 @@
     >
     <ion-card>
       <ion-item v-if="patrolEndBtn" @click="addProblem">
-        <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        <!-- <ion-icon name="add-circle-outline" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/124/1246170.gif"
+          alt=""
+          style="width: 20px; height: 20px"
+        />
         <ion-label
           v-if="problemCount === null"
           class="label-content"
@@ -359,7 +389,7 @@ export default {
             inputs: [
               {
                 name: "name1",
-                type: "text",
+                type: "number",
                 value: null,
                 placeholder: "例如:26.66",
               },

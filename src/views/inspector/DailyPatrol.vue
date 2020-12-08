@@ -4,7 +4,12 @@
     <HeaderMap />
     <ion-card>
       <ion-item>
-        <ion-icon name="flashlight" slot="start"></ion-icon>
+        <!-- <ion-icon name="flashlight" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/128/1280439.gif"
+          style="width: 30px; height: 30px"
+          alt=""
+        />
         <ion-label>
           巡查路段 {{ patrolInfo.nationalHighwayName }}
           {{ patrolInfo.roadSectionName }} {{ patrolInfo.beginStake }}~{{
@@ -14,13 +19,23 @@
       </ion-item>
 
       <ion-item>
-        <ion-icon name="business"></ion-icon>
+        <!-- <ion-icon name="business"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/108/1087412.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label> 管理单位 </ion-label>
         <ion-label>{{ deptName }}</ion-label>
       </ion-item>
 
       <ion-item v-if="!patrolCarShow">
-        <ion-icon name="car" slot="start"></ion-icon>
+        <!-- <ion-icon name="car" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/121/1215020.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label>巡查车辆</ion-label>
         <ion-select
           placeholder="选择车辆"
@@ -39,19 +54,34 @@
       </ion-item>
 
       <ion-item v-if="patrolCarShow">
-        <ion-icon name="car" slot="start"></ion-icon>
+        <!-- <ion-icon name="car" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/121/1215020.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label> 巡查车辆 </ion-label>
         <ion-label> {{ patrolBeginInfo.patrolCar }} </ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-icon name="man"></ion-icon>
+        <!-- <ion-icon name="man"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/129/1292944.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label> 巡查员 </ion-label>
         <ion-label>{{ patrolInfo.inspector }}</ion-label>
       </ion-item>
 
       <ion-item v-if="patrolBeginTime">
-        <ion-icon name="time" slot="start"></ion-icon>
+        <!-- <ion-icon name="time" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/122/1225731.gif"
+          alt=""
+          style="width: 30px; height: 30px"
+        />
         <ion-label> 开始时间 </ion-label>
         <ion-label> {{ patrolBeginInfo.beginTime }} </ion-label>
       </ion-item>
@@ -70,7 +100,12 @@
 
     <ion-card v-if="!patrolBeginBtn" @click="addProblem">
       <ion-item>
-        <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        <!-- <ion-icon name="add-circle-outline" slot="start"></ion-icon> -->
+        <img
+          src="https://static.easyicon.net/preview/124/1246170.gif"
+          alt=""
+          style="width: 20px; height: 20px"
+        />
         <ion-label
           v-if="problemCount === null"
           class="label-content"
