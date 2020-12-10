@@ -197,13 +197,17 @@ export default {
   },
   methods: {
     confirmBegin() {
-      setStore("tempFlag1", "daily");
       this.$ionic.alertController
         .create({
           header: "日常巡查",
           message: "确定要开始日常巡查吗？",
           buttons: [
-            { text: "取消" },
+            {
+              text: "取消",
+              handler: () => {
+                removeStore("tempFlag1");
+              },
+            },
             {
               text: "确定",
               handler: () => {
@@ -299,7 +303,14 @@ export default {
               .create({
                 header: "开始巡查",
                 message: "开始巡查",
-                buttons: ["确定"],
+                buttons: [
+                  {
+                    text: "确定",
+                    handler: () => {
+                      setStore("tempFlag1", "daily");
+                    },
+                  },
+                ],
               })
               .then((a) => a.present());
           }
@@ -309,7 +320,14 @@ export default {
           .create({
             header: "开始巡查",
             message: "请先选择巡查车辆",
-            buttons: ["确定"],
+            buttons: [
+              {
+                text: "确定",
+                handler: () => {
+                  removeStore("tempFlag1");
+                },
+              },
+            ],
           })
           .then((a) => a.present());
       }

@@ -232,7 +232,7 @@ export default {
   },
   data() {
     return {
-      tempFlag: 1,
+      tempFlag: null,
       alertFlag: 0,
       patrollingBtn: false,
       patrolBeginBtn: true,
@@ -309,7 +309,6 @@ export default {
       });
     },
     confirmBegin() {
-      setStore("tempFlag1", "temp");
       this.$ionic.alertController
         .create({
           header: "临时巡查",
@@ -335,12 +334,14 @@ export default {
         !(
           // this.patrolResult.roadSectionId === null ||
           // this.patrolResult.stakeEndId === null ||
+
           (
             this.patrolResult.stakeBeginId === null ||
             this.patrolResult.patrolCar === null
           )
         )
       ) {
+        setStore("tempFlag1", "temp");
         this.patrolResult.nationalHighwayId = this.nationalHighwayId;
         this.patrolResult.stakeBeginId = this.patrolResult.stakeBeginId.split(
           "."
@@ -369,11 +370,19 @@ export default {
           }
         });
       } else {
+        this.tempFlag1 = null;
         this.$ionic.alertController
           .create({
             header: "开始巡查",
             message: "请先补全巡查信息",
-            buttons: ["确定"],
+            buttons: [
+              {
+                text: "确定",
+                handler: () => {
+                  removeStore("tempFlag1");
+                },
+              },
+            ],
           })
           .then((a) => a.present());
       }

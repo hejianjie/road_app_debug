@@ -1,26 +1,31 @@
 <template>
-  <ion-app style="background-color: #F2F2F2;">
-    <Header ref="header"/>
+  <ion-app style="background-color: #f2f2f2">
+    <Header ref="header" />
     <ion-content>
-      <ion-slides pager="true" :options="slideOpts" style="height:30%;">
-        <ion-slide >
-           <viewer>
-            <img src="../../assets/img/img2.jpg">
+      <ion-slides pager="true" :options="slideOpts" style="height: 30%">
+        <ion-slide>
+          <viewer>
+            <img src="../../assets/img/img2.jpg" />
           </viewer>
         </ion-slide>
-        <ion-slide >
-           <viewer>
-            <img src="../../assets/img/img3.jpg">
+        <ion-slide>
+          <viewer>
+            <img src="../../assets/img/img3.jpg" />
           </viewer>
         </ion-slide>
       </ion-slides>
-      <ion-card v-for="notification in notifications" :key="notification.notificationId">
-        <ion-item>
-          <ion-label color="primary">{{ notification.title }}
+      <ion-card
+        v-for="notification in notifications"
+        :key="notification.notificationId"
+      >
+        <ion-item @click="presentAlert(notification.content)">
+          <ion-label color="primary"
+            >{{ notification.title }}
             <ion-badge color="success">1</ion-badge>
-            <ion-label color="medium" @click="presentAlert(notification.content)">{{notification.content}}</ion-label>
+            <ion-label color="medium">{{ notification.content }}</ion-label>
           </ion-label>
-          <ion-label>发布人: {{ notification.publisher }}
+          <ion-label
+            >发布人: {{ notification.publisher }}
             <ion-label color="medium">{{ notification.publishTime }}</ion-label>
           </ion-label>
         </ion-item>
@@ -28,32 +33,31 @@
     </ion-content>
     <TabBar />
   </ion-app>
-    
 </template>
 
 <script>
-import * as API from '@/api/API'
-import TabBar from '@/components/TabBar.vue'
-import Header from '@/components/Header.vue'
-import { thistle } from 'color-name'
+import * as API from "@/api/API";
+import TabBar from "@/components/TabBar.vue";
+import Header from "@/components/Header.vue";
+import { thistle } from "color-name";
 export default {
-  name: 'home',
+  name: "home",
   components: {
     TabBar,
-    Header
+    Header,
   },
   data() {
-    return{
+    return {
       slideOpts: {
         initialSlide: 1,
-        speed: 400
+        speed: 400,
       },
-      notifications: []
-    }
+      notifications: [],
+    };
   },
   mounted() {
-    this.$refs.header.title = '首页'
-    this.listNotification()
+    this.$refs.header.title = "首页";
+    this.listNotification();
   },
   methods: {
     /**
@@ -62,19 +66,19 @@ export default {
     presentAlert(content) {
       return this.$ionic.alertController
         .create({
-          header: '正文内容',
+          header: "正文内容",
           message: content,
-          buttons: ['OK'],
+          buttons: ["OK"],
         })
-        .then(a => a.present())
+        .then((a) => a.present());
     },
     listNotification() {
-      API.listNotification().then(response => {
-        this.notifications = response.data.content
-      })
-    }
-  }
-}
+      API.listNotification().then((response) => {
+        this.notifications = response.data.content;
+      });
+    },
+  },
+};
 </script>
 <style scoped>
 </style>
