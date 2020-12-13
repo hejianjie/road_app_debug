@@ -239,7 +239,8 @@ export default {
      * 巡查开始二次确认
      */
     confirmEnd() {
-      if (this.tempFlag == 1) {
+      console.log(getStore("tempFlag"));
+      if (getStore("tempFlag") == 1) {
         this.patrolEndBtn = false;
         // 弹框输入结束桩位置
         this.$ionic.alertController

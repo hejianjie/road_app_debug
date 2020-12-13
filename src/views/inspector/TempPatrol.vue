@@ -342,6 +342,7 @@ export default {
         )
       ) {
         setStore("tempFlag1", "temp");
+        setStore("tempFlag", 1);
         this.patrolResult.nationalHighwayId = this.nationalHighwayId;
         //将路段都改为“无路段”
         this.patrolResult.roadSectionId = this.nationalHighwayId;
