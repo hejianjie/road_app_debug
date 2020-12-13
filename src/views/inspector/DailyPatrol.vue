@@ -11,13 +11,17 @@
           alt=""
         />
         <ion-label>
-          <span>巡查路段</span
-          ><span style="margin-left: 10%">
+          <span style="display: inline-block; margin-top: 21px">巡查路线</span>
+          <span style="margin-left: 29%"></span>
+          <p style="margin-top: -10px">
             {{ patrolInfo.nationalHighwayName }}
-            {{ patrolInfo.roadSectionName }} {{ patrolInfo.beginStake }}~{{
-              patrolInfo.endStake
-            }}</span
-          ></ion-label
+            {{ patrolInfo.roadSectionName }}
+          </p>
+          <br />
+          <span style="margin-left: 50%"></span>
+          <p>
+            {{ patrolInfo.beginStake }}~{{ patrolInfo.endStake }}
+          </p></ion-label
         >
       </ion-item>
 
@@ -406,5 +410,11 @@ export default {
 }
 .span-font-size {
   font-size: 0.8rem;
+}
+p {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
 }
 </style>

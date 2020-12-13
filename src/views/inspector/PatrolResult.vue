@@ -11,11 +11,20 @@
           alt=""
         />
         <ion-label>
-          巡查路段<span style="margin-left: 10%"></span>
-          {{ patrolInfo.nationalHighwayName }} {{ patrolInfo.roadSectionName }}
-          {{ patrolInfo.beginStake }}~<span v-if="this.tempFlag == 1">暂无</span
-          ><span v-else>{{ patrolInfo.endStake }}</span></ion-label
-        >
+          <span style="display: inline-block; margin-top: 21px">巡查路线</span
+          ><span style="margin-left: 29%"></span>
+          <p style="margin-top: -10px">
+            {{ patrolInfo.nationalHighwayName }}
+            {{ patrolInfo.roadSectionName }}
+          </p>
+          <br />
+          <span style="margin-left: 50%"></span>
+          <p>
+            {{ patrolInfo.beginStake }}~<span v-if="this.tempFlag == 1"
+              >暂无</span
+            ><span v-else>{{ patrolInfo.endStake }}</span>
+          </p>
+        </ion-label>
       </ion-item>
 
       <ion-item>
@@ -399,5 +408,11 @@ export default {
 }
 .span-font-size {
   font-size: 0.8rem;
+}
+p {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
 }
 </style>
