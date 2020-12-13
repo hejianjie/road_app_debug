@@ -438,6 +438,7 @@ export default {
 
                     API.patrolEnd(params).then((response) => {
                       removeStore("tempFlag1");
+                      removeStore("tempFlag");
                       this.patrollingBtn = false;
                       this.$router.push({ path: "/inspection" });
                     });
@@ -447,11 +448,11 @@ export default {
             ],
           })
           .then((a) => a.present());
-
         API.patrolEnd(params).then((response) => {
           if (response.statusCode === 1) {
             removeStore("patrolResultId");
             removeStore("tempFlag1");
+            removeStore("tempFlag");
             this.patrolEndBtn = false;
 
             // this.$ionic.alertController

@@ -131,7 +131,12 @@ export default {
           },
         });
       } else {
-        this.$router.push("/daily-patrol");
+        this.$router.push({
+          path: "/daily-patrol",
+          query: {
+            tempFlag: 0,
+          },
+        });
       }
     },
     tempPatrol() {
@@ -161,11 +166,12 @@ export default {
             buttons: ["确定"],
           })
           .then((a) => a.present());
+        setStore("tempFlag", 0);
         this.$router.push({
           path: "/patrol-result",
-          query: {
-            tempFlag: 0,
-          },
+          // query: {
+          //   tempFlag: 0,
+          // },
         });
       } else {
         this.$router.push("/temp-patrol");

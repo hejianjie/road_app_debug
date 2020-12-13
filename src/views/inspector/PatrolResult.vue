@@ -147,7 +147,7 @@ export default {
   },
   data() {
     return {
-      tempFlag: this.$route.query.tempFlag,
+      tempFlag: null,
       problems: [],
       problemCount: null,
       patrolEndBtn: true,
