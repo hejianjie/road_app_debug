@@ -587,8 +587,7 @@ export default {
 
 
 
-      //为了传图片设置的变量
-      var roadHazardId =0;
+      
     //   var params = {
     //       roadHazardId: this.$route.query.roadHazardId,
     //       addRoadProblemForm: this.addRoadProblemForm
@@ -602,8 +601,11 @@ export default {
               message: '修改成功, 若无问题请点击结束巡查.',
               buttons: ['确定'],
             }).then(a => a.present())
-        roadHazardId = response
-        for(let i=0;i<this.imgList.length;i++){
+      });
+      //为了传图片设置的变量
+      var roadHazardId =0;
+      roadHazardId = this.roadHazardId;
+      for(let i=0;i<this.imgList.length;i++){
         let param = new FormData();
         param.append("file", this.imgList[i].file);
         param.append("roadHazardId",roadHazardId);
@@ -611,13 +613,11 @@ export default {
           headers: { "Content-Type": "multipart/form-data" }, 
         };
 
-      axios.post('http://47.99.65.198:8020/road_hazard_img/upload', param, config).then(function (response){
-         })
-        .catch(function (error) {
-        });
+        axios.post('http://47.99.65.198:8020/road_hazard_img/upload', param, config).then(function (response){
+          })
+          .catch(function (error) {
+          });
       }
-      })
-      // this.$router.go(-1)
       this.$router.push({ path: '/patrol-result', query: { "patrolResultId": this.addRoadProblemForm.patrolResultId } })
     },
     getAllhazard(){

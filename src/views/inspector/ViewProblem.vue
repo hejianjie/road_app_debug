@@ -68,6 +68,7 @@
         {{ dataProblem.description }}
       </ion-card-content>
     </ion-card>
+    
     <ion-card v-if="hazardImgs.length">
       <div
         style="display: flex; justify-content: space-around; flex-wrap: wrap"

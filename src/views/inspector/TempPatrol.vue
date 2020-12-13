@@ -343,6 +343,8 @@ export default {
       ) {
         setStore("tempFlag1", "temp");
         this.patrolResult.nationalHighwayId = this.nationalHighwayId;
+        //将路段都改为“无路段”
+        this.patrolResult.roadSectionId = this.nationalHighwayId;
         this.patrolResult.stakeBeginId = this.patrolResult.stakeBeginId.split(
           "."
         )[0];

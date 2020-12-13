@@ -187,8 +187,8 @@
 
       <div class="add-img">
         <p class="font14" v-show="imgList.length">
-          图片(最多6张，还可上传
-          <span v-text="6 - imgList.length"></span>张)
+          图片（最多6张，还可上传
+          <span v-text="6 - imgList.length"></span>张）
         </p>
         <div
           style="display: flex; justify-content: space-around; flex-wrap: wrap"
@@ -306,8 +306,6 @@ export default {
       };
       API.getRoadSection(params).then((response) => {
         if (response.statusCode === 1) {
-          console.log("getRoadSection response.data");
-          console.log(response.data);
           this.roadInfo = response.data;
         }
       });
@@ -571,7 +569,6 @@ export default {
             .catch(function (error) {});
         }
       });
-      // this.$router.go(-1)
       if (this.tempFlag == 1) {
         this.$router.push({
           path: "/patrol-result",
