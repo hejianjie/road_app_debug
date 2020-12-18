@@ -8,10 +8,10 @@
     </ion-tab>
 
     <!-- Match by an array of route names -->
-    <ion-tab tab="settings" :routes="['app.settings', 'app.other.route']">
+    <ion-tab tab="settings" :routes="['app.settings']">
       <Settings />
     </ion-tab>
-
+ 
     <!-- Use v-slot:bottom with Vue ^2.6.0 -->
     <template v-slot:bottom>
       <ion-tab-bar>

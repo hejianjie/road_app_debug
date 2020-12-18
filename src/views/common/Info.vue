@@ -105,6 +105,10 @@ export default {
         this.itab_assess = true
         this.itab_audit = false
         this.itab = false
+      }else if(16 === getStore("roleId")) {
+        this.itab = false
+        this.itab_audit = true
+        this.itab_assess = false
       }
     },
 
