@@ -198,12 +198,14 @@ export default {
         this.$router.go(-1)
     },
     calculate(){
-      var sizeArr = this.dataProblem.specificSize.split(",")
+      var sizeArr = this.dataProblem.specificSize.split("*")
+      
         switch(this.dataProblem.sizeType){
           case 1 :
             this.saveInfoForm.workAmount = (sizeArr[0]*sizeArr[1]*sizeArr[2])
             break;
           case 2 :
+            console.log("hahah" + sizeArr[0]*sizeArr[1])
             this.saveInfoForm.workAmount = (sizeArr[0]*sizeArr[1])
             break;
           case 3:

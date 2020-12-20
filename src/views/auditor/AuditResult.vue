@@ -117,6 +117,7 @@ export default {
   },
   methods: {
     getcheckRoadProblem(){
+       console.log("垃圾")
       var params = {
         //roadHazardId = this.$route.query.roadHazardId
         roadHazardId : this.$route.query.roadHazardId,
@@ -137,8 +138,9 @@ export default {
           this.roadInfo = response.data
         }
       })
-    },
+    }, 
     getAudit(){
+     
       const param ={
         //acceptanceId = this.$route.query.acceptanceId
         acceptanceId:this.$route.query.acceptanceId
